@@ -1,0 +1,338 @@
+
+==================
+TAREFA 1 – SUBESPACO W = {(x,y,z) | a x + b y + c z = 0}
+==================
+
+--------- TESTE 1.1 (caso especial: w = R^3 inteiro)
+MENU:
+  escolha a opcao: 1
+
+ENTRADA:
+  a = 0
+  b = 0
+  c = 0
+
+SAIDA ESPERADA (IDEIA):
+  texto explicando que a = b = c = 0 => w = R^3
+  base exibida (qualquer permutacao):
+    [1.0, 0.0, 0.0]
+    [0.0, 1.0, 0.0]
+    [0.0, 0.0, 1.0]
+  dimensao de w: 3
+
+
+--------- TESTE 1.2 (plano x = 0)
+MENU:
+  escolha a opcao: 1
+
+ENTRADA:
+  a = 1
+  b = 0
+  c = 0
+
+INTERPRETACAO:
+  equacao: 1*x + 0*y + 0*z = 0  =>  x = 0
+  w = plano yz.
+
+SAIDA ESPERADA (UMA POSSIBILIDADE):
+  base:
+    [0.0, 1.0, 0.0]   (eixo y)
+    [0.0, 0.0, 1.0]   (eixo z)
+  dimensao de w: 2
+
+
+--------- TESTE 1.3 (plano geral)
+MENU:
+  escolha a opcao: 1
+
+ENTRADA:
+  a = 1
+  b = 2
+  c = 3
+
+INTERPRETACAO:
+  vetor normal: v = (1, 2, 3)
+  o codigo monta:
+    u1 = (-b, a, 0) = (-2, 1, 0)
+    u2 = v x u1 = (1,2,3) x (-2,1,0) = (-3, -6, 5)
+
+SAIDA ESPERADA (DIRECOES):
+  base (pode aparecer com outros multiplos, mas equivalente a):
+    [-2.0, 1.0, 0.0]
+    [-3.0, -6.0, 5.0]
+  dimensao de w: 2
+
+
+
+==================
+TAREFA 2 – NUCLEO E IMAGEM DE T
+==================
+
+--------- TESTE 2.1 (identidade 2x2)
+MENU:
+  escolha a opcao: 2
+
+ENTRADA MATRIZ:
+  numero de linhas m: 2
+  numero de colunas n: 2
+  linhas:
+    linha 1: 1 0
+    linha 2: 0 1
+
+INTERPRETACAO:
+  matriz identidade => t eh bijetora em R^2.
+
+RESULTADO TEORICO:
+  nucleo(t) = {0}
+  imagem(t) = R^2
+
+SAIDA ESPERADA:
+  base do nucleo:
+    [0.0, 0.0]     (ou algo equivalente indicando so o vetor zero)
+  dimensao do nucleo (nullidade): 0
+
+  base da imagem (espaco coluna):
+    [1.0, 0.0]
+    [0.0, 1.0]
+  dimensao da imagem (posto): 2
+
+  verificacao:
+    n = 2 => posto + nullidade = 2 + 0 = 2
+
+
+--------- TESTE 2.2 (matriz 2x2 com colunas dependentes)
+MENU:
+  escolha a opcao: 2
+
+ENTRADA MATRIZ:
+  m = 2
+  n = 2
+  linhas:
+    linha 1: 1 2
+    linha 2: 2 4
+
+INTERPRETACAO:
+  segunda coluna = 2 * primeira
+  posto = 1, nullidade = 1.
+
+RESULTADO TEORICO:
+  resolver A x = 0:
+    x + 2y = 0  =>  x = -2y
+    nucleo gerado por [-2, 1]
+
+SAIDA ESPERADA:
+  base do nucleo (ou qualquer multiplo):
+    [-2.0, 1.0]       (pode aparecer [2.0, -1.0], etc)
+  dimensao do nucleo: 1
+
+  base da imagem (espaco coluna):
+    [1.0, 2.0]        (apenas a primeira coluna)
+  dimensao da imagem (posto): 1
+
+  verificacao:
+    n = 2 => posto + nullidade = 1 + 1 = 2
+
+
+--------- TESTE 2.3 (matriz 2x3: mais colunas que linhas)
+MENU:
+  escolha a opcao: 2
+
+ENTRADA MATRIZ:
+  m = 2
+  n = 3
+  linhas:
+    linha 1: 1 2 3
+    linha 2: 4 5 6
+
+INTERPRETACAO RAPIDA:
+  posto(A) = 2, logo nullidade = 3 - 2 = 1.
+  um vetor de nucleo eh [1, -2, 1] (pois A * [1, -2, 1]^T = 0).
+
+SAIDA ESPERADA:
+  base do nucleo:
+    [1.0, -2.0, 1.0]   (ou qualquer multiplo, ex: [-1.0, 2.0, -1.0])
+  dimensao do nucleo: 1
+
+  base da imagem (espaco coluna, colunas pivo = 1 e 2):
+    [1.0, 4.0]
+    [2.0, 5.0]
+  dimensao da imagem (posto): 2
+
+  verificacao:
+    n = 3 => posto + nullidade = 2 + 1 = 3
+
+
+
+==================
+TAREFA 3 – MATRIZ DE T DE BETA PARA GAMA
+==================
+
+--------- TESTE 3.1 (bases canonicas: matriz nao muda)
+MENU:
+  escolha a opcao: 3
+
+MATRIZ A EM BASE CANONICA:
+  m = 2
+  n = 2
+  linhas:
+    linha 1: 1 2
+    linha 2: 3 4
+
+BASE BETA (dominio, R^2):
+  beta vetor 1: 1 0
+  beta vetor 2: 0 1
+
+BASE GAMA (contradominio, R^2):
+  gama vetor 1: 1 0
+  gama vetor 2: 0 1
+
+INTERPRETACAO:
+  aqui beta e gama sao a base canonica.
+  logo [T]_{gama <- beta} = A.
+
+SAIDA ESPERADA:
+  matriz de t de beta para gama:
+    [1.0, 2.0]
+    [3.0, 4.0]
+
+
+--------- TESTE 3.2 (base beta nao canonica)
+MENU:
+  escolha a opcao: 3
+
+MATRIZ A:
+  m = 2
+  n = 2
+  linhas:
+    linha 1: 2 0
+    linha 2: 0 3
+
+BASE BETA (dominio, base inclinada em R^2):
+  beta vetor 1: 1  1
+  beta vetor 2: 1 -1
+
+BASE GAMA (contradominio, canonica):
+  gama vetor 1: 1 0
+  gama vetor 2: 0 1
+
+INTERPRETACAO:
+  P_beta = matriz com colunas (1,1) e (1,-1) = [[1,1],[1,-1]]
+  P_gama = identidade
+  [T]_{gama <- beta} = P_gama^{-1} * A * P_beta = A * P_beta
+
+  A * P_beta = [[2,0],[0,3]] * [[1,1],[1,-1]]
+             = [[2*1 + 0*1, 2*1 + 0*(-1)],
+                [0*1 + 3*1, 0*1 + 3*(-1)]]
+             = [[2, 2],
+                [3, -3]]
+
+SAIDA ESPERADA:
+  matriz de t de beta para gama:
+    [2.0,  2.0]
+    [3.0, -3.0]
+
+
+
+==================
+TAREFA 4 – AUTOVALORES, AUTOVETORES E AUTOESPACOS
+==================
+
+--------- TESTE 4.1 (matriz 2x2 diagonal com autovalores distintos)
+MENU:
+  escolha a opcao: 4
+
+MATRIZ:
+  n = 2, m = 2
+  linhas:
+    linha 1: 2 0
+    linha 2: 0 3
+
+INTERPRETACAO:
+  autovalores: 2 e 3
+  autoespaco de lambda=2: gerado por [1,0]
+  autoespaco de lambda=3: gerado por [0,1]
+
+SAIDA ESPERADA (ordem dos lambdas pode variar):
+  autovalores:
+    lambda_1 = 2.0
+    lambda_2 = 3.0
+
+  para lambda = 2.0:
+    base do autoespaco:
+      [1.0, 0.0]
+    dimensao do autoespaco: 1
+
+  para lambda = 3.0:
+    base do autoespaco:
+      [0.0, 1.0]
+    dimensao do autoespaco: 1
+
+
+--------- TESTE 4.2 (2x2 com autovalor duplo e poucos autovetores)
+MENU:
+  escolha a opcao: 4
+
+MATRIZ:
+  n = 2, m = 2
+  linhas:
+    linha 1: 2 1
+    linha 2: 0 2
+
+INTERPRETACAO:
+  matriz triangular superior, autovalor = 2 com multiplicidade 2.
+  porem o autoespaco tem dimensao 1 (apenas vetores da forma [1,0]).
+
+SAIDA ESPERADA:
+  autovalores:
+    lambda_1 = 2.0
+    lambda_2 = 2.0   (o programa depois agrupa como um so)
+
+  autoespacos (apenas um lambda distinto na pratica):
+    para lambda = 2.0:
+      base do autoespaco:
+        [1.0, 0.0]   (ou multiplo)
+      dimensao do autoespaco: 1
+
+
+--------- TESTE 4.3 (matriz 3x3 diagonal)
+MENU:
+  escolha a opcao: 4
+
+MATRIZ:
+  n = 3, m = 3
+  linhas:
+    linha 1: 1 0 0
+    linha 2: 0 2 0
+    linha 3: 0 0 3
+
+INTERPRETACAO:
+  autovalores: 1, 2, 3
+  autoespacos:
+    lambda=1: gerado por [1,0,0]
+    lambda=2: gerado por [0,1,0]
+    lambda=3: gerado por [0,0,1]
+
+OBS:
+  no caso 3x3 os autovalores sao obtidos numericamente via algoritmo qr,
+  mas para matriz diagonal eles devem aparecer muito proximos de 1, 2 e 3.
+
+SAIDA ESPERADA (aproximada):
+  autovalores:
+    lambda_1 ~ 1.0
+    lambda_2 ~ 2.0
+    lambda_3 ~ 3.0
+
+  para lambda ~ 1:
+    base do autoespaco:
+      [1.0, 0.0, 0.0]
+    dimensao: 1
+
+  para lambda ~ 2:
+    base do autoespaco:
+      [0.0, 1.0, 0.0]
+    dimensao: 1
+
+  para lambda ~ 3:
+    base do autoespaco:
+      [0.0, 0.0, 1.0]
+    dimensao: 1

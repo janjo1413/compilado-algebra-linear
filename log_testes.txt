@@ -1,0 +1,367 @@
+LOG DE TESTES DO PROGRAMA algebra_menu.py
+=========================================
+
+============================================================
+TESTE: tarefa1_w_R3
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'1\n0\n0\n0\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 1: subespaco w = {(x,y,z) | a x + b y + c z = 0} ===
+digite o valor de a: digite o valor de b: digite o valor de c: caso especial: a = b = c = 0, entao w = r3 inteiro
+uma base possivel para w eh a base canonica:
+    [1.0, 0.0, 0.0]
+    [0.0, 1.0, 0.0]
+    [0.0, 0.0, 1.0]
+dimensao de w: 3
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa1_plano_geral
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'1\n1\n2\n3\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 1: subespaco w = {(x,y,z) | a x + b y + c z = 0} ===
+digite o valor de a: digite o valor de b: digite o valor de c: uma base possivel para w eh formada pelos vetores:
+    [-2.0, 1.0, 0.0]
+    [-3.0, -6.0, 5.0]
+dimensao de w: 2
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa2_identidade_2x2
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'2\n2\n2\n1 0\n0 1\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 2: base, dimensao, nucleo e imagem de t ===
+
+matriz de t: r^n -> r^m (cada coluna representa t(e_j))
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: 
+base do nucleo de t (solucoes de a x = 0):
+    [0.0, 0.0]
+dimensao do nucleo de t (nullidade): 0
+
+base da imagem de t (espaco coluna da matriz):
+    [1.0, 0.0]
+    [0.0, 1.0]
+dimensao da imagem de t (posto da matriz): 2
+
+verificacao do teorema do posto: n = 2 e posto + nullidade = 2 + 0 = 2
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa2_dependente_2x2
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'2\n2\n2\n1 2\n2 4\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 2: base, dimensao, nucleo e imagem de t ===
+
+matriz de t: r^n -> r^m (cada coluna representa t(e_j))
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: 
+base do nucleo de t (solucoes de a x = 0):
+    [-2.0, 1.0]
+dimensao do nucleo de t (nullidade): 1
+
+base da imagem de t (espaco coluna da matriz):
+    [1.0, 2.0]
+dimensao da imagem de t (posto da matriz): 1
+
+verificacao do teorema do posto: n = 2 e posto + nullidade = 1 + 1 = 2
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa2_2x3
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'2\n2\n3\n1 2 3\n4 5 6\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 2: base, dimensao, nucleo e imagem de t ===
+
+matriz de t: r^n -> r^m (cada coluna representa t(e_j))
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: 
+base do nucleo de t (solucoes de a x = 0):
+    [1.0, -2.0, 1.0]
+dimensao do nucleo de t (nullidade): 1
+
+base da imagem de t (espaco coluna da matriz):
+    [1.0, 4.0]
+    [2.0, 5.0]
+dimensao da imagem de t (posto da matriz): 2
+
+verificacao do teorema do posto: n = 3 e posto + nullidade = 2 + 1 = 3
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa3_bases_canonicas
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'3\n2\n2\n1 2\n3 4\n1 0\n0 1\n1 0\n0 1\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 3: matriz de t de beta para gama ===
+entre com a matriz de t (m x n) nas bases canonicas
+
+matriz a de t em base canonica
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: 
+base beta: informe 2 vetores, cada um com 2 coordenadas
+beta vetor 1: beta vetor 2: 
+base gama: informe 2 vetores, cada um com 2 coordenadas
+gama vetor 1: gama vetor 2: 
+matriz de t de beta para gama (p_gama^{-1} * a * p_beta):
+    [1.0, 2.0]
+    [3.0, 4.0]
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa4_diagonal_2x2
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'4\n2\n2\n2 0\n0 3\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 4: autovalores, autovetores e autoespacos ===
+
+operador linear (matriz quadrada n x n, use n = 2 ou n = 3)
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: 
+matriz do operador:
+    [2.0, 0.0]
+    [0.0, 3.0]
+
+autovalores encontrados (em geral complexos para 2x2 e aproximados para 3x3):
+  lambda_1 = (3+0j)
+  lambda_2 = (2+0j)
+
+autoespacos e autovetores (base do nucleo de a - lambda i):
+
+para lambda = (3+0j):
+   base do autoespaco:
+    [(-0+0j), 1.0]
+   dimensao do autoespaco: 1
+
+para lambda = (2+0j):
+   base do autoespaco:
+    [1.0, (-0-0j)]
+   dimensao do autoespaco: 1
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
+============================================================
+TESTE: tarefa4_diagonal_3x3
+------------------------------------------------------------
+entrada enviada ao programa (simulando digitacao):
+'4\n3\n3\n1 0 0\n0 2 0\n0 0 3\n0\n'
+
+saida completa do programa (stdout):
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: 
+=== tarefa 4: autovalores, autovetores e autoespacos ===
+
+operador linear (matriz quadrada n x n, use n = 2 ou n = 3)
+numero de linhas m: numero de colunas n: digite cada linha com os elementos separados por espaco (exemplo: 1 2 3)
+linha 1: linha 2: linha 3: 
+matriz do operador:
+    [1.0, 0.0, 0.0]
+    [0.0, 2.0, 0.0]
+    [0.0, 0.0, 3.0]
+
+autovalores encontrados (em geral complexos para 2x2 e aproximados para 3x3):
+  lambda_1 = 1.0
+  lambda_2 = 2.0
+  lambda_3 = 3.0
+
+autoespacos e autovetores (base do nucleo de a - lambda i):
+
+para lambda = 1.0:
+   base do autoespaco:
+    [1.0, -0.0, -0.0]
+   dimensao do autoespaco: 1
+
+para lambda = 2.0:
+   base do autoespaco:
+    [0.0, 1.0, -0.0]
+   dimensao do autoespaco: 1
+
+para lambda = 3.0:
+   base do autoespaco:
+    [0.0, 0.0, 1.0]
+   dimensao do autoespaco: 1
+
+==============================
+menu algebra linear
+==============================
+1 - tarefa 1 (base e dimensao de w em r3)
+2 - tarefa 2 (nucleo e imagem de t)
+3 - tarefa 3 (matriz de t de beta para gama)
+4 - tarefa 4 (autovalores e autovetores)
+0 - sair
+sua escolha: encerrando o programa. ate mais.
+
+
+
